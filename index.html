@@ -143,6 +143,58 @@
             opacity: 0.9;
             transform: translateY(-2px);
         }
+
+        .hero-split {
+          max-width: 1200px;
+          margin: 40px auto;
+          display: flex;
+          align-items: center;
+          gap: 40px;
+          padding: 0 20px;
+        }
+        
+        .hero-image-wrap {
+          flex: 1;
+          max-width: 450px;
+        }
+        
+        .hero-image-wrap img {
+          width: 100%;
+          aspect-ratio: 1 / 1;
+          object-fit: cover;
+          border: 1px solid var(--accent-color);
+          border-radius: 12px;
+          box-shadow: 0 0 25px rgba(241, 231, 169, 0.15);
+          display: block;
+        }
+        
+        .hero-text {
+          flex: 1;
+          text-align: left;
+        }
+        
+        .hero-text h1 {
+          font-size: 32px;
+          line-height: 1.3;
+          margin-bottom: 20px;
+          color: #ffffff;
+        }
+        
+        @media (max-width: 768px) {
+          .hero-split {
+            flex-direction: column;
+            text-align: center;
+          }
+        
+          .hero-text {
+            text-align: center;
+          }
+        
+          .hero-image-wrap {
+            max-width: 100%;
+          }
+        }
+        
         .suggestion-section {
             max-width: 600px;
             margin: 40px auto 80px;
@@ -243,9 +295,15 @@
         <div class="separator-fade"></div>
     </header>
     <main>
-    <section class="hero">
+    <section class="hero-split">
+      <div class="hero-image-wrap">
+        <img src="frontpageimage7.jpg" alt="Presoldered Microcontroller Kit">
+      </div>
+    
+      <div class="hero-text">
         <h1>Presoldered MCU kits. No extras, no leftovers, just enough.</h1>
-        <a href="mcus/" class="hero-btn">Our microcontrollers</a>
+        <a href="/mcus/" class="hero-btn">Our microcontrollers</a>
+      </div>
     </section>
     <section class="suggestion-section">
     <h2>Suggest a Future MCU Kit</h2>
